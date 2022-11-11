@@ -1,0 +1,387 @@
+﻿Starting copying files to remote machine.
+Copying 'C:\Code\chat-crossplatform\chat_server\chat_server.c' to '/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c'.
+Copying 'C:\Code\chat-crossplatform\chat_server\cross_platform_def.h' to '/home/omar/.vs/chat-crossplatform/chat_server/cross_platform_def.h'.
+Copying 'C:\Code\chat-crossplatform\chat_server\threads.c' to '/home/omar/.vs/chat-crossplatform/chat_server/threads.c'.
+Finished copying files (elapsed time 00h:00m:00s:493ms).
+ cd /home/omar/.vs/chat-crossplatform/out/build/linux-debug;/usr/bin/cmake --build /home/omar/.vs/chat-crossplatform/out/build/linux-debug --config Debug;
+
+[1/6] Building C object chat_server/CMakeFiles/chat_server.dir/threads.c.o
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c: In function ‘start_thread’:
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:11:31: warning: passing argument 1 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+   11 |         return pthread_create(&id, NULL, func, args);
+      |                               ^~~
+      |                               |
+      |                               int *
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/threads.c:3:
+/usr/include/pthread.h:202:50: note: expected ‘pthread_t * restrict’ {aka ‘long unsigned int * restrict’} but argument is of type ‘int *’
+  202 | extern int pthread_create (pthread_t *__restrict __newthread,
+      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:11:42: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+   11 |         return pthread_create(&id, NULL, func, args);
+      |                                          ^~~~
+      |                                          |
+      |                                          void (*)(void *)
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/threads.c:3:
+/usr/include/pthread.h:204:36: note: expected ‘void * (*)(void *)’ but argument is of type ‘void (*)(void *)’
+  204 |                            void *(*__start_routine) (void *),
+      |                            ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c: In function ‘join_thread’:
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:31:30: warning: passing argument 2 of ‘pthread_join’ from incompatible pointer type [-Wincompatible-pointer-types]
+   31 |         pthread_join(handle, dpret);
+      |                              ^~~~~
+      |                              |
+      |                              int **
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/threads.c:3:
+/usr/include/pthread.h:219:49: note: expected ‘void **’ but argument is of type ‘int **’
+  219 | extern int pthread_join (pthread_t __th, void **__thread_return);
+      |                                          ~~~~~~~^~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:32:13: warning: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   32 |         ret = *dpret;
+      |             ^
+[2/6] Building C object chat_server/CMakeFiles/argon2.dir/threads.c.o
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c: In function ‘start_thread’:
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:11:31: warning: passing argument 1 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+   11 |         return pthread_create(&id, NULL, func, args);
+      |                               ^~~
+      |                               |
+      |                               int *
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/threads.c:3:
+/usr/include/pthread.h:202:50: note: expected ‘pthread_t * restrict’ {aka ‘long unsigned int * restrict’} but argument is of type ‘int *’
+  202 | extern int pthread_create (pthread_t *__restrict __newthread,
+      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:11:42: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+   11 |         return pthread_create(&id, NULL, func, args);
+      |                                          ^~~~
+      |                                          |
+      |                                          void (*)(void *)
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/threads.c:3:
+/usr/include/pthread.h:204:36: note: expected ‘void * (*)(void *)’ but argument is of type ‘void (*)(void *)’
+  204 |                            void *(*__start_routine) (void *),
+      |                            ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c: In function ‘join_thread’:
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:31:30: warning: passing argument 2 of ‘pthread_join’ from incompatible pointer type [-Wincompatible-pointer-types]
+   31 |         pthread_join(handle, dpret);
+      |                              ^~~~~
+      |                              |
+      |                              int **
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/threads.c:3:
+/usr/include/pthread.h:219:49: note: expected ‘void **’ but argument is of type ‘int **’
+  219 | extern int pthread_join (pthread_t __th, void **__thread_return);
+      |                                          ~~~~~~~^~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/threads.c:32:13: warning: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Wint-conversion]
+   32 |         ret = *dpret;
+      |             ^
+[3/6] Building C object chat_server/CMakeFiles/chat_server.dir/dbInterface.c.o
+[4/6] Linking C static library chat_server/libargon2.a
+[5/6] Building C object chat_server/CMakeFiles/chat_server.dir/chat_server.c.o
+FAILED: chat_server/CMakeFiles/chat_server.dir/chat_server.c.o 
+/usr/bin/cc  -I/home/omar/.vs/chat-crossplatform -g -MD -MT chat_server/CMakeFiles/chat_server.dir/chat_server.c.o -MF chat_server/CMakeFiles/chat_server.dir/chat_server.c.o.d -o chat_server/CMakeFiles/chat_server.dir/chat_server.c.o -c /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:28: warning: ‘enum paramflags’ declared inside parameter list will not be visible outside of this definition or declaration
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                            ^~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c: In function ‘main’:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:71:20: warning: passing argument 2 of ‘signal’ from incompatible pointer type [-Wincompatible-pointer-types]
+   71 |     signal(SIGINT, HandlerRoutine);
+      |                    ^~~~~~~~~~~~~~
+      |                    |
+      |                    BOOL (*)(DWORD) {aka bool (*)(long int)}
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/include.h:21,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/signal.h:88:57: note: expected ‘__sighandler_t’ {aka ‘void (*)(int)’} but argument is of type ‘BOOL (*)(DWORD)’ {aka ‘bool (*)(long int)’}
+   88 | extern __sighandler_t signal (int __sig, __sighandler_t __handler)
+      |                                          ~~~~~~~~~~~~~~~^~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:105:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  105 |             ParameterHandler(&par, i, NULL, &port, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:110:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  110 |             ParameterHandler(&par, i, &ip, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:115:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |             ParameterHandler(&par, i, &certname, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:120:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  120 |             ParameterHandler(&par, i, &privkeyname, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:125:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  125 |             ParameterHandler(&par, i, &g_CredFname, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:130:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  130 |             ParameterHandler(&par, i, &g_SaltFname, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:135:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  135 |             ParameterHandler(&par, i, &g_Salt, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:135:39: warning: passing argument 3 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  135 |             ParameterHandler(&par, i, &g_Salt, NULL, argv);
+      |                                       ^~~~~~~
+      |                                       |
+      |                                       uint16_t ** {aka short unsigned int **}
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:66: note: expected ‘char **’ but argument is of type ‘uint16_t **’ {aka ‘short unsigned int **’}
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                                                           ~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:140:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  140 |             ParameterHandler(&par, i, NULL, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:147:30: warning: passing argument 1 of ‘ParameterHandler’ from incompatible pointer type [-Wincompatible-pointer-types]
+  147 |             ParameterHandler(&par, i, NULL, NULL, argv);
+      |                              ^~~~
+      |                              |
+      |                              enum paramflags *
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:40: note: expected ‘enum paramflags *’ but argument is of type ‘enum paramflags *’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |                       ~~~~~~~~~~~~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:200:15: warning: implicit declaration of function ‘WSAGetLastError’ [-Wimplicit-function-declaration]
+  200 |         err = WSAGetLastError();
+      |               ^~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:219:10: warning: type defaults to ‘int’ in declaration of ‘threadHandle1’ [-Wimplicit-int]
+  219 |     auto threadHandle1 = (ParseCommands, 0, NULL);
+      |          ^~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:219:26: warning: initialization of ‘int’ from ‘void *’ makes integer from pointer without a cast [-Wint-conversion]
+  219 |     auto threadHandle1 = (ParseCommands, 0, NULL);
+      |                          ^
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:220:5: warning: implicit declaration of function ‘CloseHandle’; did you mean ‘ClientHandler’? [-Wimplicit-function-declaration]
+  220 |     CloseHandle(threadHandle1);
+      |     ^~~~~~~~~~~
+      |     ClientHandler
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:225:14: warning: type defaults to ‘int’ in declaration of ‘threadHandle’ [-Wimplicit-int]
+  225 |         auto threadHandle = _beginthread(ClientHandler, 0, NULL);
+      |              ^~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:225:29: warning: implicit declaration of function ‘_beginthread’ [-Wimplicit-function-declaration]
+  225 |         auto threadHandle = _beginthread(ClientHandler, 0, NULL);
+      |                             ^~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c: In function ‘ClientHandler’:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:446:26: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  446 |                     free(toWrite);
+      |                          ^~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:449:40: warning: passing argument 2 of ‘WriteDB’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  449 |                 if (!WriteDB(username, toWrite, l, db, 0, &err))
+      |                                        ^~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/include.h:9,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/home/omar/.vs/chat-crossplatform/chat_server/dbInterface.h:39:21: note: expected ‘char *’ but argument is of type ‘const char *’
+   39 |         _In_  char* data,
+      |               ~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:452:26: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  452 |                     free(toWrite);
+      |                          ^~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:456:22: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  456 |                 free(toWrite);
+      |                      ^~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:536:36: warning: passing argument 2 of ‘WriteDB’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  536 |             if (!WriteDB(username, parsed, l, db, DB_NOOVERWRITE, &err))
+      |                                    ^~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/include.h:9,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/home/omar/.vs/chat-crossplatform/chat_server/dbInterface.h:39:21: note: expected ‘char *’ but argument is of type ‘const char *’
+   39 |         _In_  char* data,
+      |               ~~~~~~^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:545:13: warning: implicit declaration of function ‘sprintf_s’; did you mean ‘printf_s’? [-Wimplicit-function-declaration]
+  545 |             sprintf_s(joinMsg, sz, "Welcome %s!", username);
+      |             ^~~~~~~~~
+      |             printf_s
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:548:13: warning: implicit declaration of function ‘fprintf_s’; did you mean ‘printf_s’? [-Wimplicit-function-declaration]
+  548 |             fprintf_s(chatlog, "%s\n", joinMsg);
+      |             ^~~~~~~~~
+      |             printf_s
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:551:18: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  551 |             free(parsed);
+      |                  ^~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:692:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  692 |             data = ParseStructIntoString(c, &len);
+      |                  ^
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:841:34: warning: passing argument 1 of ‘memset’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  841 |                 SecureZeroMemory(newTargetData, newLen);
+      |                                  ^~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/cross_platform_def.h:29:40: note: in definition of macro ‘SecureZeroMemory’
+   29 | #define SecureZeroMemory(p, sz) memset(p, 0, sz)
+      |                                        ^
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/utarray.h:32,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:5,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/string.h:61:28: note: expected ‘void *’ but argument is of type ‘const char *’
+   61 | extern void *memset (void *__s, int __c, size_t __n) __THROW __nonnull ((1));
+      |                      ~~~~~~^~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:842:22: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  842 |                 free(newTargetData);
+      |                      ^~~~~~~~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:848:34: warning: passing argument 2 of ‘WriteDB’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  848 |             if (!WriteDB(target, newTargetData, newLen, db, 0, &err))
+      |                                  ^~~~~~~~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/include.h:9,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/home/omar/.vs/chat-crossplatform/chat_server/dbInterface.h:39:21: note: expected ‘char *’ but argument is of type ‘const char *’
+   39 |         _In_  char* data,
+      |               ~~~~~~^~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:855:34: warning: passing argument 1 of ‘memset’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  855 |                 SecureZeroMemory(newTargetData, newLen);
+      |                                  ^~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/cross_platform_def.h:29:40: note: in definition of macro ‘SecureZeroMemory’
+   29 | #define SecureZeroMemory(p, sz) memset(p, 0, sz)
+      |                                        ^
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/utarray.h:32,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:5,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/string.h:61:28: note: expected ‘void *’ but argument is of type ‘const char *’
+   61 | extern void *memset (void *__s, int __c, size_t __n) __THROW __nonnull ((1));
+      |                      ~~~~~~^~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:856:22: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  856 |                 free(newTargetData);
+      |                      ^~~~~~~~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:866:30: warning: passing argument 1 of ‘memset’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  866 |             SecureZeroMemory(newTargetData, newLen);
+      |                              ^~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/cross_platform_def.h:29:40: note: in definition of macro ‘SecureZeroMemory’
+   29 | #define SecureZeroMemory(p, sz) memset(p, 0, sz)
+      |                                        ^
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/utarray.h:32,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:5,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/string.h:61:28: note: expected ‘void *’ but argument is of type ‘const char *’
+   61 | extern void *memset (void *__s, int __c, size_t __n) __THROW __nonnull ((1));
+      |                      ~~~~~~^~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:867:18: warning: passing argument 1 of ‘free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  867 |             free(newTargetData);
+      |                  ^~~~~~~~~~~~~
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/vec.h:11,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:4,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/stdlib.h:555:25: note: expected ‘void *’ but argument is of type ‘const char *’
+  555 | extern void free (void *__ptr) __THROW;
+      |                   ~~~~~~^~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:979:35: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  979 |             char* newTargetData = ParseStructIntoString(targetData, &newLen);
+      |                                   ^~~~~~~~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c: At top level:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1298:6: error: conflicting types for ‘ParameterHandler’; have ‘_Bool(enum paramflags *, int,  char **, int *, char **)’
+ 1298 | bool ParameterHandler(enum paramflags* flag, int i, char** str1, int* int1, char** argv)
+      |      ^~~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:34:6: note: previous declaration of ‘ParameterHandler’ with type ‘_Bool(enum paramflags *, int,  char **, int *, char **)’
+   34 | bool ParameterHandler(enum paramflags* flag, int element, char** str1, int* int1, char** argv);
+      |      ^~~~~~~~~~~~~~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c: In function ‘ParameterHandler’:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1331:26: warning: initialization of ‘uint16_t *’ {aka ‘short unsigned int *’} from incompatible pointer type ‘char **’ [-Wincompatible-pointer-types]
+ 1331 |         uint16_t* salt = str1;
+      |                          ^~~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c: In function ‘UnicodeToMByte’:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1410:23: warning: passing argument 1 of ‘strlen’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1410 |     int slen = strlen(unicodeStr);
+      |                       ^~~~~~~~~~
+      |                       |
+      |                       LPCWSTR {aka const short int *}
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/utarray.h:32,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:5,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/string.h:407:35: note: expected ‘const char *’ but argument is of type ‘LPCWSTR’ {aka ‘const short int *’}
+  407 | extern size_t strlen (const char *__s)
+      |                       ~~~~~~~~~~~~^~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1412:32: warning: passing argument 1 of ‘strlen’ from incompatible pointer type [-Wincompatible-pointer-types]
+ 1412 |     for (int i = 0; i < strlen(unicodeStr); i++)
+      |                                ^~~~~~~~~~
+      |                                |
+      |                                LPCWSTR {aka const short int *}
+In file included from /home/omar/.vs/chat-crossplatform/chat_server/utarray.h:32,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/include.h:5,
+                 from /home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:2:
+/usr/include/string.h:407:35: note: expected ‘const char *’ but argument is of type ‘LPCWSTR’ {aka ‘const short int *’}
+  407 | extern size_t strlen (const char *__s)
+      |                       ~~~~~~~~~~~~^~~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c: In function ‘ParseCommands’:
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1560:24: warning: comparison between pointer and integer
+ 1560 |             if (target == 0x01) continue;
+      |                        ^~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1600:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1600 |             data = ParseStructIntoString(c, &l);
+      |                  ^
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1628:24: warning: comparison between pointer and integer
+ 1628 |             if (target == 0x01) continue;
+      |                        ^~
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1668:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1668 |             data = ParseStructIntoString(c, &l);
+      |                  ^
+/home/omar/.vs/chat-crossplatform/chat_server/chat_server.c:1669:49: warning: implicit declaration of function ‘_set_errno’; did you mean ‘ERR_set_error’? [-Wimplicit-function-declaration]
+ 1669 |             if (!DeleteKey(db, target, &err)) { _set_errno(err); HandlerRoutine(CTRL_CLOSE_EVENT); }
+      |                                                 ^~~~~~~~~~
+      |                                                 ERR_set_error
+ninja: build stopped: subcommand failed.
+
+
+Build failed.
